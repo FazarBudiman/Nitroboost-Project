@@ -64,25 +64,27 @@ const Headers = () => {
         </Col>
       </Row>
 
-      <Drawer title={<img src={logoNitroboost} width={200} />} placement={"top"} size="large" width={500} onClose={onClose} closable={false} open={open} extra={<RxCross2 size={22} onClick={onClose} />}>
-        <Row>
-          <Col>
+      <Drawer title={<img src={logoNitroboost} width={200} />} placement={"top"} size="large" width={"100vw"} height={"100vh"} onClose={onClose} closable={false} open={open} extra={<RxCross2 size={24} onClick={onClose} />}>
+        <Row gutter={[0, 20]}>
+          <Col span={22}>
             <Link href="" target="_blank">
               Tentang Kami
             </Link>
           </Col>
-          <Col>
+          <Col span={22}>
             <Link href="" target="_blank">
               Layanan
             </Link>
           </Col>
-          <Col>
+          <Col span={22}>
             <Link href="" target="_blank">
               Galeri
             </Link>
           </Col>
-          <Col>
-            <Button>Daftar</Button>
+          <Col span={22}>
+            <Button type="primary" style={{ width: "100%" }}>
+              Daftar
+            </Button>
           </Col>
         </Row>
       </Drawer>
