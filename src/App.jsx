@@ -1,35 +1,31 @@
 import { ConfigProvider } from "antd";
 import "./App.css";
+import "../src/assets/styles/font.css";
 import Home from "./pages/Home";
-import "@fontsource/titillium-web";
+import "@fontsource/titillium-web/200.css";
+import "@fontsource/titillium-web/300.css";
+import "@fontsource/titillium-web/400.css";
+import "@fontsource/titillium-web/600.css";
+import "@fontsource/titillium-web/700.css";
+import "@fontsource/titillium-web/900.css";
 
 function App() {
   return (
     <ConfigProvider
       theme={{
         token: {
-          fontFamily: "'Titillium Web'",
           colorText: "#13629e",
+          colorLink: "#13629e",
           colorPrimary: "#13629e",
           motionDurationSlow: "1s",
-          fontSize: 16,
-          fontSizeHeading5: 18,
-          fontSizeHeading4: 22,
-          fontSizeHeading3: 26,
-          fontSizeHeading2: 32,
-          fontSizeHeading1: 40,
-          fontSizeXL: 22,
-          fontSizeLG: 18,
-          fontSizeSM: 14,
-          fontWeightStrong: 700,
         },
         components: {
           Layout: {
             headerBg: "#fff",
-            headerHeight: 80,
-            headerPadding: "0px 50px 80px",
+            headerHeight: 100,
             footerBg: "#0d1b30",
             footerPadding: "50px 0px 90px",
+            headerPadding: "0px 0px",
           },
           Button: {
             contentFontSize: 16,

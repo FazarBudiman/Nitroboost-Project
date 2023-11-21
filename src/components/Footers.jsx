@@ -51,7 +51,7 @@ const Footers = () => {
               offset: 1,
             }}
             sm={{
-              span: 14,
+              span: 22,
               offset: 1,
             }}
             md={{
@@ -92,7 +92,8 @@ const Footers = () => {
               offset: 1,
             }}
             sm={{
-              span: 8,
+              span: 22,
+              offset: 1,
             }}
             md={{
               span: 8,
@@ -125,7 +126,7 @@ const Footers = () => {
               offset: 1,
             }}
             sm={{
-              span: 14,
+              span: 22,
               offset: 1,
             }}
             md={{
@@ -160,11 +161,12 @@ const Footers = () => {
           </Col>
           <Col
             xs={{
-              span: 12,
+              span: 15,
               offset: 1,
             }}
             sm={{
-              span: 6,
+              span: 10,
+              offset: 1,
             }}
             md={{
               span: 6,
@@ -212,7 +214,7 @@ const Footers = () => {
             }}
             sm={{
               span: 14,
-              offset: 2,
+              offset: 1,
             }}
             xs={{
               span: 22,

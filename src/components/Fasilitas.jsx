@@ -1,5 +1,4 @@
 import { Col, Flex, Grid, Row } from "antd";
-import Title from "antd/es/typography/Title";
 import dailySignalIlustrasi from "../assets/images/ilustrasi/daily-signal-ilustrasi.png";
 import liveTradingIlustrasi from "../assets/images/ilustrasi/live-trading-ilustrasi.png";
 import webinarIlustrasi from "../assets/images/ilustrasi/webinar-ilustrasi.png";
@@ -8,44 +7,34 @@ const { useBreakpoint } = Grid;
 
 const Fasilitas = () => {
   const { xs } = useBreakpoint();
-  const heightImg = xs ? "150px" : "250px";
+  const heightImg = xs ? "150px" : "200px";
   return (
     <div style={{ marginTop: 120 }}>
       <Row align={"middle"} justify={"center"}>
-        <Title level={2} style={{ letterSpacing: 6 }}>
-          OUR FACILITIES
-        </Title>
+        <h1>OUR FACILITIES</h1>
       </Row>
-      <Row align={"middle"} justify={"center"} style={{ marginTop: 25 }} gutter={[0, 40]}>
-        <Col xs={16} sm={16} md={10} lg={10} xl={5} xxl={6}>
+      <Row align={"middle"} justify={"center"} style={{ marginTop: 35 }} gutter={[0, 30]}>
+        <Col xs={16} sm={16} md={10} lg={10} xl={{ span: 5 }}>
           <Flex vertical align="center">
-            <Title level={3} style={{ letterSpacing: 6 }}>
-              Daily Signal
-            </Title>
+            <h2>Daily Signal</h2>
             <img src={dailySignalIlustrasi} height={heightImg} />
           </Flex>
         </Col>
-        <Col xs={16} sm={16} md={10} lg={10} xl={5} xxl={6}>
+        <Col xs={16} sm={16} md={10} lg={10} xl={{ span: 5 }}>
           <Flex vertical align="center">
-            <Title level={3} style={{ letterSpacing: 6 }}>
-              Live Trading
-            </Title>
+            <h2>Live Trading</h2>
             <img src={liveTradingIlustrasi} height={heightImg} />
           </Flex>
         </Col>
-        <Col xs={16} sm={16} md={10} lg={10} xl={5} xxl={6}>
+        <Col xs={16} sm={16} md={10} lg={10} xl={{ span: 5 }}>
           <Flex vertical align="center">
-            <Title level={3} style={{ letterSpacing: 6 }}>
-              Webinar
-            </Title>
+            <h2>Webinar</h2>
             <img src={webinarIlustrasi} height={heightImg} />
           </Flex>
         </Col>
-        <Col xs={16} sm={16} md={10} lg={10} xl={5} xxl={6}>
+        <Col xs={16} sm={16} md={10} lg={10} xl={{ span: 5 }}>
           <Flex vertical align="center">
-            <Title level={3} style={{ letterSpacing: 6 }}>
-              Seminar
-            </Title>
+            <h2>Seminar</h2>
             <img src={seminarIlustrasi} height={heightImg} />
           </Flex>
         </Col>

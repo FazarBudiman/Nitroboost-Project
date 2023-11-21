@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <Layout>
       <Headers />
-      <Content>
+      <Content style={{ backgroundColor: "white" }}>
         <Hero />
         <WhyUs />
         <Fasilitas />

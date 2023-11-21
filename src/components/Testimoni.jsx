@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { Avatar, Col, Row } from "antd";
-import Title from "antd/es/typography/Title";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,7 +56,7 @@ const Testimoni = () => {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -66,7 +65,7 @@ const Testimoni = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -95,32 +94,26 @@ const Testimoni = () => {
   };
 
   return (
-    <div style={{ marginTop: 120 }}>
-      <Row align={"middle"} justify={"center"}>
-        <Title level={2} style={{ letterSpacing: 6 }}>
-          TESTIMONY
-        </Title>
-      </Row>
-      <Row align={"middle"} justify={"center"} style={{ marginTop: 25 }}>
-        <Col span={20} xs={20}>
-          <Slider {...settingCarousel}>
-            {dataTestimoni.map((val) => {
-              return (
-                <div key={val.id}>
-                  <Title level={4} style={{ letterSpacing: 4 }}>
-                    {val.nama}
-                  </Title>
-                  <div className={parseInt(val.id) % 2 === 0 ? "item-carousel-style-1" : "item-carousel-style-2"}>
-                    <Avatar size={100} src={val.image} />
-                    <p style={{ textAlign: "justify", marginTop: 20 }}>{val.testimoni}</p>
-                  </div>
+    <Row style={{ marginTop: 130 }} justify={"center"} gutter={[0, 40]}>
+      <Col span={22} style={{ textAlign: "center" }}>
+        <h1>TESTIMONY</h1>
+      </Col>
+      <Col xs={18} sm={18} md={20} lg={20} xl={22}>
+        <Slider {...settingCarousel}>
+          {dataTestimoni.map((val) => {
+            return (
+              <div key={val.id}>
+                <h3>{val.nama}</h3>
+                <div className={parseInt(val.id) % 2 === 0 ? "item-carousel-style-1" : "item-carousel-style-2"}>
+                  <Avatar size={130} src={val.image} />
+                  <p style={{ textAlign: "left", marginTop: 20, fontSize: "14pt" }}>{val.testimoni}</p>
                 </div>
-              );
-            })}
-          </Slider>
-        </Col>
-      </Row>
-    </div>
+              </div>
+            );
+          })}
+        </Slider>
+      </Col>
+    </Row>
   );
 };
 

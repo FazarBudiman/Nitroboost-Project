@@ -24,8 +24,9 @@ const itemsMenu = [
     key: "daftar",
     label: (
       <div style={{ backgroundColor: "#13629e", color: "white", padding: "0px 20px" }}>
-        <Link>Daftar</Link>
-        <span style={{ height: "2.5px", width: "37px", position: "absolute", top: 50, left: 36, backgroundColor: "white" }}></span>
+        <Link href="#join-us" style={{ borderBottom: "2.5px solid white" }}>
+          Daftar
+        </Link>
       </div>
     ),
   },
@@ -41,6 +42,7 @@ const Headers = () => {
   };
 
   const [open, setOpen] = useState(false);
+
   const showDrawer = () => {
     setOpen(true);
   };
@@ -50,39 +52,39 @@ const Headers = () => {
   };
 
   return (
-    <Header style={{ borderBottom: "3px solid #13629e" }}>
+    <Header style={{ borderBottom: "2px solid #13629e" }}>
       <Row align={"middle"}>
-        <Col xs={16} sm={16} md={11} lg={14} xl={17} xxl={20} style={{ display: "flex", alignItems: "center" }}>
+        <Col xs={{ offset: 1, span: 16 }} sm={{ offset: 1, span: 10 }} md={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 12 }} xl={{ offset: 2, span: 14 }} style={{ display: "flex", alignItems: "center" }}>
           <img src={logoNitroboost} width={250} style={{ maxWidth: "70%", height: "auto" }} alt="logo-nitroboost" />
         </Col>
-        <Col xs={8} sm={8} md={6} lg={8} xl={6} xxl={4}>
-          {(xs && !md) || (sm && !md) ? (
+        <Col xs={4} sm={12} md={6} lg={6} xl={4}>
+          {(xs && !md) || (sm && !md) || (!xs && !sm && !md) ? (
             <FaBars size={24} style={{ position: "relative", top: 9, left: "90%" }} onClick={showDrawer} />
           ) : (
-            <Menu mode="horizontal" onClick={onClick} selectedKeys={[current]} style={{ minWidth: 400 }} items={itemsMenu} />
+            <Menu mode="horizontal" onClick={onClick} selectedKeys={[current]} style={{ minWidth: 400, height: 98, fontSize: "12pt" }} items={itemsMenu} />
           )}
         </Col>
       </Row>
 
       <Drawer title={<img src={logoNitroboost} width={200} />} placement={"top"} size="large" width={"100vw"} height={"100vh"} onClose={onClose} closable={false} open={open} extra={<RxCross2 size={24} onClick={onClose} />}>
         <Row gutter={[0, 20]}>
-          <Col span={22}>
+          <Col span={20} offset={2}>
             <Link href="" target="_blank">
               Tentang Kami
             </Link>
           </Col>
-          <Col span={22}>
+          <Col span={20} offset={2}>
             <Link href="" target="_blank">
               Layanan
             </Link>
           </Col>
-          <Col span={22}>
+          <Col span={20} offset={2}>
             <Link href="" target="_blank">
               Galeri
             </Link>
           </Col>
-          <Col span={22}>
-            <Button type="primary" style={{ width: "100%" }}>
+          <Col span={20} offset={2}>
+            <Button type="primary" href="#join-us" style={{ width: "100%" }} onClick={onClose}>
               Daftar
             </Button>
           </Col>

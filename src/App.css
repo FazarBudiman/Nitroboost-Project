@@ -2,4 +2,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1 {
+  font-size: 32pt;
+  font-weight: 700;
+  letter-spacing: 5pt;
+  color: #13629e;
+}
+
+h2 {
+  font-size: 26pt;
+  font-weight: 600;
+  letter-spacing: 3pt;
+  color: #13629e;
+}
+
+h3 {
+  font-size: 18pt;
+  font-weight: 600;
+  letter-spacing: 1pt;
+  color: #13629e;
+}
+
+p {
+  font-size: 16pt;
+  font-weight: 400;
 }
