@@ -11,20 +11,20 @@ const Footers = () => {
   const { xs } = useBreakpoint();
   const fontSizeTitle = xs
     ? {
-        fontSize: "16px",
-        letterSpacing: "2px",
+        fontSize: "13pt",
+        letterSpacing: "1pt",
       }
     : {
-        fontSize: "18px",
-        letterSpacing: "3px",
+        fontSize: "15pt",
+        letterSpacing: "2pt",
       };
 
   const fontSizeText = xs
     ? {
-        fontSize: "12px",
+        fontSize: "9pt",
       }
     : {
-        fontSize: "14px",
+        fontSize: "11pt",
       };
 
   return (
@@ -66,10 +66,6 @@ const Footers = () => {
               span: 14,
               offset: 2,
             }}
-            xxl={{
-              span: 14,
-              offset: 2,
-            }}
           >
             <Space>
               <Link href="http://www.youtube.com/@NitroBoost-us9zk" target="_blank">
@@ -102,9 +98,6 @@ const Footers = () => {
               span: 6,
             }}
             xl={{
-              span: 6,
-            }}
-            xxl={{
               span: 6,
             }}
           >
@@ -141,10 +134,6 @@ const Footers = () => {
               span: 14,
               offset: 2,
             }}
-            xxl={{
-              span: 14,
-              offset: 2,
-            }}
           >
             <Space direction="vertical">
               <Title level={5} style={fontSizeTitle}>
@@ -169,16 +158,13 @@ const Footers = () => {
               offset: 1,
             }}
             md={{
-              span: 6,
+              span: 7,
             }}
             lg={{
-              span: 5,
+              span: 6,
             }}
             xl={{
-              span: 4,
-            }}
-            xxl={{
-              span: 2,
+              span: 5,
             }}
           >
             <Space direction="vertical" style={{ width: "100%" }}>
@@ -188,7 +174,7 @@ const Footers = () => {
               <Link
                 href="https://wa.me/message/Y2SKK6PXXHDME1"
                 target="_blank"
-                style={{ backgroundColor: "#00b451", padding: "5px 0px 2px 10px", width: "95%", borderRadius: 5, display: "flex", gap: 5, alignItems: "center", fontSize: fontSizeText.fontSize }}
+                style={{ backgroundColor: "#00b451", padding: "10px 0px 10px 10px", borderRadius: 5, display: "flex", gap: 5, alignItems: "center", fontSize: fontSizeText.fontSize }}
               >
                 <FaWhatsapp size={22} />
                 <span>WA +62 811-145-377</span>
@@ -196,11 +182,15 @@ const Footers = () => {
             </Space>
           </Col>
           <Col
-            xxl={{
-              span: 14,
-              offset: 2,
+            xs={{
+              span: 22,
+              offset: 1,
             }}
-            xl={{
+            sm={{
+              span: 14,
+              offset: 1,
+            }}
+            md={{
               span: 14,
               offset: 2,
             }}
@@ -208,17 +198,9 @@ const Footers = () => {
               span: 14,
               offset: 2,
             }}
-            md={{
+            xl={{
               span: 14,
               offset: 2,
-            }}
-            sm={{
-              span: 14,
-              offset: 1,
-            }}
-            xs={{
-              span: 22,
-              offset: 1,
             }}
           >
             <Space direction="vertical" size={"small"}>

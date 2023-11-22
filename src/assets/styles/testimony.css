@@ -1,7 +1,7 @@
 .slick-slide > div {
   margin: 0px 22.5px;
   text-align: center;
-  height: 670px;
+  height: 500px;
 }
 
 .slick-next::before,
@@ -13,7 +13,7 @@
   margin-top: 10px;
   border-radius: 5px;
   padding: 30px 15px;
-  min-height: 620px;
+  min-height: 464px;
   color: #13629e;
   background-color: #e0dede;
 }
@@ -22,7 +22,7 @@
   margin-top: 10px;
   border-radius: 5px;
   padding: 30px 15px;
-  min-height: 620px;
+  min-height: 464px;
   color: white;
   background-color: #13629e;
 }

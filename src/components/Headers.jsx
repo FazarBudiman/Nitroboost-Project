@@ -6,6 +6,7 @@ import Link from "antd/es/typography/Link";
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 const { useBreakpoint } = Grid;
+import "../assets/styles/header.css";
 
 const itemsMenu = [
   {
@@ -23,7 +24,7 @@ const itemsMenu = [
   {
     key: "daftar",
     label: (
-      <div style={{ backgroundColor: "#13629e", color: "white", padding: "0px 20px" }}>
+      <div className="menu-daftar">
         <Link href="#join-us" style={{ borderBottom: "2.5px solid white" }}>
           Daftar
         </Link>
