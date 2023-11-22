@@ -18,6 +18,7 @@ function App() {
           colorLink: "#13629e",
           colorPrimary: "#13629e",
           motionDurationSlow: "1s",
+          colorError: "#ff0000",
         },
         components: {
           Layout: {

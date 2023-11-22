@@ -3,7 +3,7 @@ import backgroundJoinUs from "../assets/images/background/background-join-us.png
 
 const JoinUs = () => {
   const validateMessages = {
-    required: "Silahkan masukkan ${label} anda !!! ",
+    required: "Silahkan masukkan ${label} anda  ",
     types: {
       email: "Format ${label} tidak sesuai",
       url: "Format ${label} tidak sesuai",

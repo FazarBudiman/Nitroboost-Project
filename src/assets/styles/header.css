@@ -3,12 +3,8 @@
   color: #ffffff;
   padding: 0px 20px;
   transition: background-color 1.5s;
-  /* transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); */
-  /* transition: opacity 10s cubic-bezier(0.25, 0.1, 0.25, 1); */
 }
 
 .menu-daftar:hover {
-  /* opacity: 0.8; */
   background-color: #0a487a;
-  /* background-color: #ffffff; */
 }
