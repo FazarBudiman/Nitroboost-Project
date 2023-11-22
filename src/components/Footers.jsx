@@ -215,12 +215,12 @@ const Footers = () => {
               </Space>
 
               <Text style={fontSizeText}>
-                <b>Disclaimer : </b>Seluruh konten didalam website ini hanya bersifat informatif. PT. NitroBoost tidak menjamin kelengkapan dan akurasinya. PT. NitroBoost tidak bertanggung jawab atas segala bentuk kerugian, baik langsung
-                maupun tidak langsung, akibat penggunaan informasi yang tersedia di website ini.
+                <b>Disclaimer : </b>Seluruh konten didalam website ini hanya bersifat informatif. Pihak NitroBoost tidak menjamin kelengkapan dan akurasinya. Pihak NitroBoost tidak bertanggung jawab atas segala bentuk kerugian, baik
+                langsung maupun tidak langsung, akibat penggunaan informasi yang tersedia di website ini.
               </Text>
               <Text style={fontSizeText}>
-                <b>Kebijakan Privasi : </b>PT. NitroBoost membutuhkan informasi pribadi bagi pihak yang melakukan pendaftaran untuk kepentingan internal. PT. NitroBoost dan karyawannya berkewajiban menjaga kerahasiaan informasi tersebut dan
-                tidak akan memberikannya kepada pihak ketiga. Namun jika diwajibkan oleh undang-undang, PT. NitroBoost dapat memberikan informasi tersebut ke otoritas publik.
+                <b>Kebijakan Privasi : </b>Pihak NitroBoost membutuhkan informasi pribadi bagi pihak yang melakukan pendaftaran untuk kepentingan internal. Pihak NitroBoost dan karyawannya berkewajiban menjaga kerahasiaan informasi tersebut
+                dan tidak akan memberikannya kepada pihak ketiga. Namun jika diwajibkan oleh undang-undang, Pihak NitroBoost dapat memberikan informasi tersebut ke otoritas publik.
               </Text>
             </Space>
           </Col>

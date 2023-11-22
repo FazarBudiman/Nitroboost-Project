@@ -9,17 +9,10 @@ const JoinUs = () => {
       url: "Format ${label} tidak sesuai",
     },
   };
-  const onFinish = (values) => {
-    console.log(values);
+  const onFinish = (val) => {
+    console.log(val);
   };
 
-  const formatter = (value) => {
-    return `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
-  const parser = (value) => {
-    return value.replace(/\$\s?|(,*)/g, "");
-  };
   return (
     <div
       id="join-us"
@@ -41,9 +34,9 @@ const JoinUs = () => {
       </Row>
       <Row justify={"center"} style={{ marginTop: 25 }}>
         <Col xs={20} sm={20} md={16} lg={14} xl={13}>
-          <Form name="join-us" layout="vertical" validateMessages={validateMessages} onFinish={onFinish}>
+          <Form name="join-us" layout="vertical" validateMessages={validateMessages} onFinish={(e) => onFinish(e)}>
             <Form.Item
-              name="nama"
+              name="name"
               required
               label="Nama"
               style={{ letterSpacing: 2, fontWeight: 600 }}
@@ -72,7 +65,7 @@ const JoinUs = () => {
               <Input placeholder="Masukkan email" />
             </Form.Item>
             <Form.Item
-              name="noHandphone"
+              name="No_Handphone"
               required
               label="No. Handphone"
               style={{ letterSpacing: 2, fontWeight: 600 }}
@@ -82,10 +75,10 @@ const JoinUs = () => {
                 },
               ]}
             >
-              <InputNumber placeholder="Masukkan no. handphone" size="large" style={{ width: "100%" }} formatter={formatter} parser={parser} />
+              <InputNumber placeholder="Masukkan no. handphone" size="large" style={{ width: "100%" }} />
             </Form.Item>
             <Form.Item
-              name="url"
+              name="Kode_Referral"
               label="Kode Referral"
               style={{ letterSpacing: 2, fontWeight: 600 }}
               tooltip={{
