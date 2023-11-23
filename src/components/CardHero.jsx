@@ -3,7 +3,7 @@ import backgroundHero from "../assets/images/background/background-hero.png";
 import taglineNoMobile from "../assets/images/tagline.png";
 import taglineMobile from "../assets/images/tagline-mobile.png";
 
-const Hero = () => {
+const CardHero = () => {
   const { xs } = Grid.useBreakpoint();
   const tagline = xs ? taglineMobile : taglineNoMobile;
   const styleMobile = xs && {
@@ -30,4 +30,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default CardHero;

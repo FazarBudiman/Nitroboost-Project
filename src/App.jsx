@@ -8,6 +8,11 @@ import "@fontsource/titillium-web/400.css";
 import "@fontsource/titillium-web/600.css";
 import "@fontsource/titillium-web/700.css";
 import "@fontsource/titillium-web/900.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Galeri from "./pages/Galeri";
+import Fasilitas from "./pages/Fasilitas";
+import JoinUs from "./pages/JoinUs";
+import Router from "./router/Router";
 
 function App() {
   const { xs } = Grid.useBreakpoint();
@@ -53,7 +58,7 @@ function App() {
         },
       }}
     >
-      <Home />
+      <Router />
     </ConfigProvider>
   );
 }

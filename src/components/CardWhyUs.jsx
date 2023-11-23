@@ -2,7 +2,7 @@ import { Col, Grid, Row, Space } from "antd";
 import ilustrasiWhyUs from "../assets/images/ilustrasi/why-us-ilustrasi.png";
 const { useBreakpoint } = Grid;
 
-const WhyUs = () => {
+const CardWhyUs = () => {
   const { xs, sm, md, lg } = useBreakpoint();
   const cardElement = xs
     ? {
@@ -54,4 +54,4 @@ const WhyUs = () => {
   );
 };
 
-export default WhyUs;
+export default CardWhyUs;

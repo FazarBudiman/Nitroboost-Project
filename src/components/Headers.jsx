@@ -2,15 +2,15 @@ import { Button, Col, Drawer, Grid, Menu, Row } from "antd";
 import { Header } from "antd/es/layout/layout";
 import logoNitroboost from "../assets/images/logo-nitroboost.png";
 import { useState } from "react";
-import Link from "antd/es/typography/Link";
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 const { useBreakpoint } = Grid;
 import "../assets/styles/header.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const itemsMenu = [
   {
-    key: "tentangKami",
+    key: "tentang-kami",
     label: "Tentang Kami",
   },
   {
@@ -22,12 +22,10 @@ const itemsMenu = [
     label: "Galeri",
   },
   {
-    key: "daftar",
+    key: "join-us",
     label: (
       <div className="menu-daftar">
-        <Link href="#join-us" style={{ borderBottom: "2.5px solid white" }}>
-          Daftar
-        </Link>
+        <Link style={{ borderBottom: "2.5px solid white" }}>Daftar</Link>
       </div>
     ),
   },
@@ -35,11 +33,12 @@ const itemsMenu = [
 
 const Headers = () => {
   const { xs, sm, md } = useBreakpoint();
-  const [current, setCurrent] = useState("");
+  const navigate = useNavigate();
 
-  const onClick = (e) => {
-    console.log("click ", e);
-    setCurrent(e.key);
+  const onClickMenu = (e) => {
+    setTimeout(() => {
+      navigate(`/${e}`);
+    }, 2000);
   };
 
   const [open, setOpen] = useState(false);
@@ -62,7 +61,7 @@ const Headers = () => {
           {(xs && !md) || (sm && !md) || (!xs && !sm && !md) ? (
             <FaBars size={24} style={{ position: "relative", top: 9, left: "90%" }} onClick={showDrawer} />
           ) : (
-            <Menu mode="horizontal" onClick={onClick} selectedKeys={[current]} style={{ minWidth: 400, height: 98, fontSize: "12pt" }} items={itemsMenu} />
+            <Menu mode="horizontal" onClick={(e) => onClickMenu(e.key)} style={{ minWidth: 400, height: 98, fontSize: "12pt" }} items={itemsMenu} />
           )}
         </Col>
       </Row>
@@ -80,24 +79,20 @@ const Headers = () => {
       >
         <Row gutter={[0, 20]}>
           <Col span={20} offset={2}>
-            <Link href="" target="_blank">
-              Tentang Kami
-            </Link>
+            <Link to="/tentang-kami">Tentang Kami</Link>
           </Col>
           <Col span={20} offset={2}>
-            <Link href="" target="_blank">
-              Layanan
-            </Link>
+            <Link to="/fasilitas">Fasilitas</Link>
           </Col>
           <Col span={20} offset={2}>
-            <Link href="" target="_blank">
-              Galeri
-            </Link>
+            <Link to="/galeri">Galeri</Link>
           </Col>
           <Col span={20} offset={2}>
-            <Button type="primary" href="#join-us" style={{ width: "100%" }} onClick={onClose}>
-              Daftar
-            </Button>
+            <Link to="/join-us">
+              <Button type="primary" style={{ width: "100%" }}>
+                Daftar
+              </Button>
+            </Link>
           </Col>
         </Row>
       </Drawer>

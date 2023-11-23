@@ -2,7 +2,7 @@ import { Col, Flex, Grid, Row } from "antd";
 import daftarFasilitas from "../assets/data/daftarFasilitas";
 const { useBreakpoint } = Grid;
 
-const Fasilitas = () => {
+const CardFasilitas = () => {
   const { xs } = useBreakpoint();
   const heightImg = xs ? "150px" : "200px";
 
@@ -34,4 +34,4 @@ const Fasilitas = () => {
   );
 };
 
-export default Fasilitas;
+export default CardFasilitas;

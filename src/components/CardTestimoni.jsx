@@ -7,14 +7,16 @@ import Slider from "react-slick";
 import dataTestimoni from "../assets/data/dataTestimoni";
 import "../assets/styles/testimony.css";
 
-const Testimoni = () => {
+const CardTestimoni = () => {
   const { xs } = Grid.useBreakpoint();
   const cardElement = xs
     ? {
         marginTop: "70px",
+        marginBottom: "70px",
       }
     : {
         marginTop: "130px",
+        marginBottom: "120px",
       };
 
   const PrevArrow = (props) => {
@@ -126,4 +128,4 @@ const Testimoni = () => {
   );
 };
 
-export default Testimoni;
+export default CardTestimoni;

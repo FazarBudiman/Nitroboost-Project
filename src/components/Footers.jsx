@@ -102,13 +102,13 @@ const Footers = () => {
             }}
           >
             <Space direction="vertical">
-              <Link href="" target="_blank" style={fontSizeText}>
+              <Link href="/tentang-kami" style={fontSizeText}>
                 Tentang Kami
               </Link>
-              <Link href="" target="_blank" style={fontSizeText}>
+              <Link href="/fasilitas" style={fontSizeText}>
                 Fasilitas
               </Link>
-              <Link href="" target="_blank" style={fontSizeText}>
+              <Link href="/galeri" style={fontSizeText}>
                 Galeri
               </Link>
             </Space>

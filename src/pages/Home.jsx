@@ -2,22 +2,22 @@ import { Layout } from "antd";
 import { Content } from "antd/es/layout/layout";
 import Footers from "../components/Footers";
 import Headers from "../components/Headers";
-import Testimoni from "../components/Testimoni";
-import Hero from "../components/Hero";
-import WhyUs from "../components/WhyUs";
-import Fasilitas from "../components/Fasilitas";
-import JoinUs from "../components/JoinUs";
+import CardHero from "../components/CardHero";
+import CardWhyUs from "../components/CardWhyUs";
+import CardFasilitas from "../components/CardFasilitas";
+import CardTestimoni from "../components/CardTestimoni";
+import CardJoinUs from "../components/CardJoinUs";
 
 const Home = () => {
   return (
     <Layout>
       <Headers />
-      <Content style={{ backgroundColor: "white" }}>
-        <Hero />
-        <WhyUs />
-        <Fasilitas />
-        <Testimoni />
-        <JoinUs />
+      <Content>
+        <CardHero />
+        <CardWhyUs />
+        <CardFasilitas />
+        <CardTestimoni />
+        <CardJoinUs />
       </Content>
       <Footers />
     </Layout>

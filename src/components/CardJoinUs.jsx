@@ -2,7 +2,7 @@ import { Button, Col, Form, Grid, Input, Row, message } from "antd";
 import backgroundJoinUs from "../assets/images/background/background-join-us.png";
 import backgroundJoinUsMobile from "../assets/images/background/background-join-us-mobile.png";
 
-const JoinUs = () => {
+const CardJoinUs = () => {
   const { xs } = Grid.useBreakpoint();
   const backgroundImage = xs ? backgroundJoinUsMobile : backgroundJoinUs;
   const [form] = Form.useForm();
@@ -68,7 +68,6 @@ const JoinUs = () => {
     <div
       id="join-us"
       style={{
-        marginTop: 120,
         paddingTop: 50,
         backgroundPosition: "center",
         backgroundImage: `url(${backgroundImage})`,
@@ -152,4 +151,4 @@ const JoinUs = () => {
   );
 };
 
-export default JoinUs;
+export default CardJoinUs;
