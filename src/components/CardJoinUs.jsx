@@ -14,9 +14,14 @@ const CardJoinUs = () => {
       email: "Format ${label} tidak sesuai",
       url: "Format ${label} tidak sesuai",
     },
+    string: {
+      max: "${label} tidak boleh lebih dari 13 digit",
+    },
   };
 
   const onFinish = (val) => {
+    const phoneNumber = val.No_Handphone.substring(0, 4) + "-" + val.No_Handphone.substring(4, 8) + "-" + val.No_Handphone.substring(8, val.No_Handphone.length);
+
     try {
       fetch("https://sheetdb.io/api/v1/b97ftmjkho2ja", {
         method: "POST",
@@ -29,7 +34,7 @@ const CardJoinUs = () => {
             {
               Nama: val.name,
               Email: val.email,
-              No_Handphone: val.No_Handphone,
+              No_Handphone: phoneNumber,
               Kode_Referral: val.Kode_Referral,
             },
           ],
@@ -124,9 +129,12 @@ const CardJoinUs = () => {
                 {
                   required: true,
                 },
+                {
+                  max: 13,
+                },
               ]}
             >
-              <Input placeholder="Masukkan no. handphone" />
+              <Input type="number" placeholder="Masukkan no. handphone" />
             </Form.Item>
             <Form.Item
               name="Kode_Referral"
