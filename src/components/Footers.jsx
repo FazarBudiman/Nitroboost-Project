@@ -1,9 +1,9 @@
 import { Col, ConfigProvider, Divider, Grid, Row, Space, Typography } from "antd";
 import { Footer } from "antd/es/layout/layout";
-import Link from "antd/es/typography/Link";
 import Title from "antd/es/typography/Title";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoLogoFacebook, IoLogoTiktok, IoLogoYoutube, IoLogoInstagram } from "react-icons/io5";
+import { Link } from "react-router-dom";
 const { Text } = Typography;
 const { useBreakpoint } = Grid;
 
@@ -68,18 +68,18 @@ const Footers = () => {
             }}
           >
             <Space>
-              <Link href="http://www.youtube.com/@NitroBoost-us9zk" target="_blank">
+              <a href="http://www.youtube.com/@NitroBoost-us9zk" target="_blank" rel="noreferrer">
                 <IoLogoYoutube size={26} />
-              </Link>
-              <Link href="https://instagram.com/nitro_officialjkt?utm_source=qr" target="_blank">
+              </a>
+              <a href="https://instagram.com/nitro_officialjkt?utm_source=qr" target="_blank" rel="noreferrer">
                 <IoLogoInstagram size={26} />
-              </Link>
-              <Link href="" target="_blank">
+              </a>
+              <a href="" target="_blank" rel="noreferrer">
                 <IoLogoFacebook size={26} />
-              </Link>
-              <Link href="https://www.tiktok.com/@nitro_offialjkt?_t=8hSmEgVKUGQ&_r=1" target="_blank">
+              </a>
+              <a href="https://www.tiktok.com/@nitro_offialjkt?_t=8hSmEgVKUGQ&_r=1" target="_blank" rel="noreferrer">
                 <IoLogoTiktok size={26} />
-              </Link>
+              </a>
             </Space>
           </Col>
           <Col
@@ -102,13 +102,13 @@ const Footers = () => {
             }}
           >
             <Space direction="vertical">
-              <Link href="/tentang-kami" style={fontSizeText}>
+              <Link to="/tentang-kami" style={fontSizeText}>
                 Tentang Kami
               </Link>
-              <Link href="/fasilitas" style={fontSizeText}>
+              <Link to="/fasilitas" style={fontSizeText}>
                 Fasilitas
               </Link>
-              <Link href="/galeri" style={fontSizeText}>
+              <Link to="/galeri" style={fontSizeText}>
                 Galeri
               </Link>
             </Space>
@@ -171,14 +171,15 @@ const Footers = () => {
               <Title level={5} style={fontSizeTitle}>
                 Chat Support
               </Title>
-              <Link
+              <a
                 href="https://wa.me/message/Y2SKK6PXXHDME1"
                 target="_blank"
+                rel="noreferrer"
                 style={{ backgroundColor: "#00b451", padding: "10px 0px 10px 10px", borderRadius: 5, display: "flex", gap: 5, alignItems: "center", fontSize: fontSizeText.fontSize }}
               >
                 <FaWhatsapp size={22} />
                 <span>WA +62 811-145-377</span>
-              </Link>
+              </a>
             </Space>
           </Col>
           <Col
