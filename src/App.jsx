@@ -1,4 +1,4 @@
-import { ConfigProvider } from "antd";
+import { ConfigProvider, Grid } from "antd";
 import "./App.css";
 import "../src/assets/styles/font.css";
 import Home from "./pages/Home";
@@ -10,6 +10,9 @@ import "@fontsource/titillium-web/700.css";
 import "@fontsource/titillium-web/900.css";
 
 function App() {
+  const { xs } = Grid.useBreakpoint();
+  const paddingBlock = xs ? 4 : 7;
+  const labelFontSize = xs ? 14 : 16;
   return (
     <ConfigProvider
       theme={{
@@ -41,11 +44,11 @@ function App() {
           },
           Form: {
             labelColor: "#fff",
-            labelFontSize: 16,
+            labelFontSize: labelFontSize,
             verticalLabelPadding: "1px 0px",
           },
           Input: {
-            paddingBlock: 7,
+            paddingBlock: paddingBlock,
           },
         },
       }}

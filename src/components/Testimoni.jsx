@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Avatar, Col, Row } from "antd";
+import { Avatar, Col, Grid, Row } from "antd";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,6 +8,15 @@ import dataTestimoni from "../assets/data/dataTestimoni";
 import "../assets/styles/testimony.css";
 
 const Testimoni = () => {
+  const { xs } = Grid.useBreakpoint();
+  const cardElement = xs
+    ? {
+        marginTop: "70px",
+      }
+    : {
+        marginTop: "130px",
+      };
+
   const PrevArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -45,16 +54,16 @@ const Testimoni = () => {
         },
       },
       {
-        breakpoint: 1200,
+        breakpoint: 1240,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
         },
       },
       {
-        breakpoint: 992,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -72,7 +81,7 @@ const Testimoni = () => {
         },
       },
       {
-        breakpoint: 576,
+        breakpoint: 731,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -94,7 +103,7 @@ const Testimoni = () => {
   };
 
   return (
-    <Row style={{ marginTop: 130 }} justify={"center"} gutter={[0, 40]}>
+    <Row style={cardElement} justify={"center"} gutter={[0, 40]}>
       <Col span={22} style={{ textAlign: "center" }}>
         <h1>TESTIMONY</h1>
       </Col>

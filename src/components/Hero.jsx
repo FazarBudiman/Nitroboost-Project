@@ -1,11 +1,19 @@
-import { Button, Col, Flex, Row } from "antd";
+import { Button, Col, Flex, Grid, Row } from "antd";
 import backgroundHero from "../assets/images/background/background-hero.png";
-import tagline from "../assets/images/tagline.png";
+import taglineNoMobile from "../assets/images/tagline.png";
+import taglineMobile from "../assets/images/tagline-mobile.png";
 
 const Hero = () => {
+  const { xs } = Grid.useBreakpoint();
+  const tagline = xs ? taglineMobile : taglineNoMobile;
+  const styleMobile = xs && {
+    position: "relative",
+    top: -30,
+  };
+
   return (
-    <Row style={{ padding: "125px 0px 0px 50px", backgroundImage: `url(${backgroundHero})`, backgroundPosition: "top", backgroundSize: "100%", backgroundRepeat: "no-repeat" }}>
-      <Col xs={18} sm={{ offset: 1, span: 12 }} md={{ offset: 1, span: 11 }} lg={{ offset: 2, span: 10 }} xl={{ offset: 2, span: 9 }}>
+    <Row style={{ padding: "125px 0px 0px 50px", backgroundImage: `url(${backgroundHero})`, backgroundPosition: "top", backgroundSize: "100%", backgroundRepeat: "no-repeat" }} className="background-image">
+      <Col xs={16} sm={{ offset: 1, span: 12 }} md={{ offset: 1, span: 11 }} lg={{ offset: 2, span: 10 }} xl={{ offset: 2, span: 9 }} style={styleMobile}>
         <Flex vertical>
           <img src={tagline} width={"100%"} />
           <p style={{ margin: "10px 0px 40px", width: "120%" }}>

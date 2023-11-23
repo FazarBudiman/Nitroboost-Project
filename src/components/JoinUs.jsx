@@ -1,7 +1,13 @@
-import { Button, Col, Form, Input, InputNumber, Row } from "antd";
+import { Button, Col, Form, Grid, Input, Row, message } from "antd";
 import backgroundJoinUs from "../assets/images/background/background-join-us.png";
+import backgroundJoinUsMobile from "../assets/images/background/background-join-us-mobile.png";
 
 const JoinUs = () => {
+  const { xs } = Grid.useBreakpoint();
+  const backgroundImage = xs ? backgroundJoinUsMobile : backgroundJoinUs;
+  const [form] = Form.useForm();
+  const [messageApi, contextHolder] = message.useMessage();
+
   const validateMessages = {
     required: "Silahkan masukkan ${label} anda  ",
     types: {
@@ -9,8 +15,53 @@ const JoinUs = () => {
       url: "Format ${label} tidak sesuai",
     },
   };
+
   const onFinish = (val) => {
-    console.log(val);
+    try {
+      fetch("https://sheetdb.io/api/v1/b97ftmjkho2ja", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          data: [
+            {
+              Nama: val.name,
+              Email: val.email,
+              No_Handphone: val.No_Handphone,
+              Kode_Referral: val.Kode_Referral,
+            },
+          ],
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.created !== undefined) {
+            form.resetFields();
+            messageApi.open({
+              type: "success",
+              content: <span style={{ paddingTop: 100, position: "relative", top: 2, left: 0 }}>Registrasi Berhasil</span>,
+              className: "custom-class",
+              style: {
+                marginTop: "30vh",
+              },
+            });
+          } else {
+            console.log("Registrasi Gagal");
+            messageApi.open({
+              type: "error",
+              content: <span style={{ paddingTop: 100, position: "relative", top: 2, left: 0 }}>Registrasi Gagal</span>,
+              className: "custom-class",
+              style: {
+                marginTop: "30vh",
+              },
+            });
+          }
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -20,13 +71,13 @@ const JoinUs = () => {
         marginTop: 120,
         paddingTop: 50,
         backgroundPosition: "center",
-        backgroundImage: `url(${backgroundJoinUs})`,
+        backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
       }}
     >
       <Row justify={"center"}>
         <Col xs={22} sm={22} md={18} lg={12} xl={12}>
-          <h2 style={{ textAlign: "center", letterSpacing: 6, color: "white" }}>
+          <h2 style={{ textAlign: "center", color: "white" }}>
             Bergabung dengan Kami
             <br /> dan Jadilah Trader Terbaik
           </h2>
@@ -34,7 +85,8 @@ const JoinUs = () => {
       </Row>
       <Row justify={"center"} style={{ marginTop: 25 }}>
         <Col xs={20} sm={20} md={16} lg={14} xl={13}>
-          <Form name="join-us" layout="vertical" validateMessages={validateMessages} onFinish={(e) => onFinish(e)}>
+          {contextHolder}
+          <Form form={form} name="join-us" layout="vertical" validateMessages={validateMessages} onFinish={(e) => onFinish(e)}>
             <Form.Item
               name="name"
               required
@@ -75,7 +127,7 @@ const JoinUs = () => {
                 },
               ]}
             >
-              <InputNumber placeholder="Masukkan no. handphone" size="large" style={{ width: "100%" }} />
+              <Input placeholder="Masukkan no. handphone" />
             </Form.Item>
             <Form.Item
               name="Kode_Referral"

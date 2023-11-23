@@ -5,8 +5,16 @@ const { useBreakpoint } = Grid;
 const Fasilitas = () => {
   const { xs } = useBreakpoint();
   const heightImg = xs ? "150px" : "200px";
+
+  const cardElement = xs
+    ? {
+        marginTop: "70px",
+      }
+    : {
+        marginTop: "120px",
+      };
   return (
-    <div style={{ marginTop: 120 }}>
+    <div style={cardElement}>
       <Row align={"middle"} justify={"center"}>
         <h1>OUR FACILITIES</h1>
       </Row>

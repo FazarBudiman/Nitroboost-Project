@@ -187,7 +187,7 @@ const Footers = () => {
               offset: 1,
             }}
             sm={{
-              span: 14,
+              span: 16,
               offset: 1,
             }}
             md={{
