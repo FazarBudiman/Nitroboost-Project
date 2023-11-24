@@ -79,17 +79,23 @@ const Headers = () => {
       >
         <Row gutter={[0, 20]}>
           <Col span={20} offset={2}>
-            <Link to="/tentang-kami">Tentang Kami</Link>
+            <Link to="/tentang-kami" style={{ color: "#13629e" }}>
+              Tentang Kami
+            </Link>
           </Col>
           <Col span={20} offset={2}>
-            <Link to="/fasilitas">Fasilitas</Link>
+            <Link to="/fasilitas" style={{ color: "#13629e" }}>
+              Fasilitas
+            </Link>
           </Col>
           <Col span={20} offset={2}>
-            <Link to="/galeri">Galeri</Link>
+            <Link to="/galeri" style={{ color: "#13629e" }}>
+              Galeri
+            </Link>
           </Col>
           <Col span={20} offset={2}>
             <Link to="/join-us">
-              <Button type="primary" style={{ width: "100%" }}>
+              <Button type="primary" size="middle" style={{ width: "100%" }}>
                 Daftar
               </Button>
             </Link>
