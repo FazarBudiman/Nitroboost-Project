@@ -6,23 +6,25 @@ const CardWhyUs = () => {
   const { xs, sm, md, lg } = useBreakpoint();
   const cardElement = xs
     ? {
-        marginTop: "30px",
+        marginTop: "15px",
       }
     : {
         marginTop: "70px",
       };
 
   const ilustrasi = xs && {
-    marginTop: "-40px",
+    marginTop: "-30px",
   };
+
+  const paddingTitle = xs ? "30px" : "50px";
   return (
     <div style={cardElement}>
       {(xs && !md) || (sm && !md) || (md && !lg) ? (
-        <Row gutter={[0, { sm: 40 }]}>
-          <Col sm={{ offset: 1, span: 22 }} xs={22} style={{ paddingLeft: "50px" }}>
+        <Row gutter={[0, { sm: 30 }]}>
+          <Col sm={{ offset: 1, span: 22 }} xs={22} style={{ paddingLeft: paddingTitle }}>
             <h1>WHY US</h1>
           </Col>
-          <Col xs={{ offset: 5, span: 14 }} sm={{ offset: 5, span: 14 }} style={ilustrasi}>
+          <Col xs={{ offset: 4, span: 16 }} sm={{ offset: 4, span: 16 }} style={ilustrasi}>
             <img src={ilustrasiWhyUs} width={"100%"} />
           </Col>
           <Col xs={{ offset: 3, span: 18 }} sm={{ offset: 3, span: 18 }} style={{ textAlign: "center" }}>

@@ -11,12 +11,15 @@ const CardHero = () => {
     top: -30,
   };
 
+  const paddingTop = xs ? "100px" : "120px";
+  const paddingLeft = xs ? "30px" : "50px";
+
   return (
-    <Row style={{ padding: "125px 0px 0px 50px", backgroundImage: `url(${backgroundHero})`, backgroundPosition: "top", backgroundSize: "100%", backgroundRepeat: "no-repeat" }} className="background-image">
-      <Col xs={16} sm={{ offset: 1, span: 12 }} md={{ offset: 1, span: 11 }} lg={{ offset: 2, span: 10 }} xl={{ offset: 2, span: 9 }} style={styleMobile}>
+    <Row style={{ paddingTop: paddingTop, paddingLeft: paddingLeft, backgroundImage: `url(${backgroundHero})`, backgroundPosition: "top", backgroundSize: "100%", backgroundRepeat: "no-repeat" }} className="background-image">
+      <Col xs={16} sm={{ offset: 1, span: 16 }} md={{ offset: 1, span: 14 }} lg={{ offset: 2, span: 10 }} xl={{ offset: 2, span: 9 }} style={styleMobile}>
         <Flex vertical>
           <img src={tagline} width={"100%"} />
-          <p style={{ margin: "10px 0px 40px", width: "120%" }}>
+          <p style={{ margin: "10px 0px 40px", width: "125%" }}>
             Komunitas berisikan traders berpengalaman, yang akan menemani dan membimbing anda untuk menemukan pola serta cara yang tepat sesuai keinginan dan keadaan anda dalam bertrading untuk tetap terus merasakan profit konsisten.
           </p>
           <Col span={2}>

@@ -11,8 +11,12 @@ import Router from "./router/Router";
 
 function App() {
   const { xs } = Grid.useBreakpoint();
-  const paddingBlock = xs ? 4 : 7;
+  const headerHeight = xs ? 80 : 100;
+  const paddingBlock = xs ? 5 : 7;
   const labelFontSize = xs ? 14 : 16;
+  const itemMarginBottom = xs ? 14 : 24;
+  const fontSizeButton = xs ? 12 : 16;
+
   return (
     <ConfigProvider
       theme={{
@@ -26,15 +30,13 @@ function App() {
         components: {
           Layout: {
             headerBg: "#fff",
-            headerHeight: 100,
+            headerHeight: headerHeight,
             footerBg: "#0d1b30",
             footerPadding: "50px 0px 90px",
             headerPadding: "0px 0px",
           },
           Button: {
-            contentFontSize: 16,
-            contentFontSizeLG: 18,
-            contentFontSizeSM: 16,
+            contentFontSize: fontSizeButton,
           },
           Menu: {
             itemColor: "#13629e",
@@ -45,7 +47,8 @@ function App() {
           Form: {
             labelColor: "#fff",
             labelFontSize: labelFontSize,
-            verticalLabelPadding: "1px 0px",
+            verticalLabelPadding: "1px 0px 0px",
+            itemMarginBottom: itemMarginBottom,
           },
           Input: {
             paddingBlock: paddingBlock,

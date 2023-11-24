@@ -117,7 +117,7 @@ const CardTestimoni = () => {
                 <h3>{val.nama}</h3>
                 <div className={parseInt(val.id) % 2 === 0 ? "item-carousel-style-1" : "item-carousel-style-2"}>
                   <Avatar size={130} src={val.image} />
-                  <p style={{ textAlign: "left", marginTop: 20, fontSize: "12pt" }}>{val.testimoni}</p>
+                  <p style={{ textAlign: "left", marginTop: 20, fontSize: "11pt" }}>{val.testimoni}</p>
                 </div>
               </div>
             );

@@ -5,6 +5,7 @@ import backgroundJoinUsMobile from "../assets/images/background/background-join-
 const CardJoinUs = () => {
   const { xs } = Grid.useBreakpoint();
   const backgroundImage = xs ? backgroundJoinUsMobile : backgroundJoinUs;
+
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
 
@@ -147,7 +148,7 @@ const CardJoinUs = () => {
             >
               <Input placeholder="Masukkan kode referral" />
             </Form.Item>
-            <Form.Item style={{ marginTop: 20, textAlign: "center" }}>
+            <Form.Item style={{ marginTop: 30, textAlign: "center" }}>
               <Button htmlType="submit" type="primary" style={{ letterSpacing: 2, backgroundColor: "white", color: "#13629e", fontWeight: 600 }}>
                 Submit
               </Button>

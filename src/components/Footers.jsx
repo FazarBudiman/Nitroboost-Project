@@ -11,7 +11,7 @@ const Footers = () => {
   const { xs } = useBreakpoint();
   const fontSizeTitle = xs
     ? {
-        fontSize: "13pt",
+        fontSize: "12pt",
         letterSpacing: "1pt",
       }
     : {
@@ -167,7 +167,7 @@ const Footers = () => {
               span: 5,
             }}
           >
-            <Space direction="vertical" style={{ width: "100%" }}>
+            <Space direction="vertical" style={{ width: "98%" }}>
               <Title level={5} style={fontSizeTitle}>
                 Chat Support
               </Title>
@@ -178,7 +178,7 @@ const Footers = () => {
                 style={{ backgroundColor: "#00b451", padding: "10px 0px 10px 10px", borderRadius: 5, display: "flex", gap: 5, alignItems: "center", fontSize: fontSizeText.fontSize }}
               >
                 <FaWhatsapp size={22} />
-                <span>WA +62 811-145-377</span>
+                <span style={{ fontSize: "12pt" }}>WA +62 811-145-377</span>
               </a>
             </Space>
           </Col>
@@ -188,11 +188,11 @@ const Footers = () => {
               offset: 1,
             }}
             sm={{
-              span: 16,
+              span: 20,
               offset: 1,
             }}
             md={{
-              span: 14,
+              span: 16,
               offset: 2,
             }}
             lg={{

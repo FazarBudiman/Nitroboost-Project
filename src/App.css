@@ -37,21 +37,21 @@ a {
 
 @media only screen and (max-width: 576px) {
   h1 {
-    font-size: 28pt;
+    font-size: 22pt;
     letter-spacing: 3pt;
   }
 
   h2 {
-    font-size: 19pt;
+    font-size: 15pt;
     letter-spacing: 2pt;
   }
 
   h3 {
-    font-size: 16pt;
+    font-size: 14pt;
     letter-spacing: 1pt;
   }
 
   p {
-    font-size: 14pt;
+    font-size: 12pt;
   }
 }
