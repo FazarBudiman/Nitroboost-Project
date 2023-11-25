@@ -26,6 +26,8 @@ function App() {
           colorPrimary: "#13629e",
           motionDurationSlow: "1s",
           colorError: "#ff0000",
+          colorTextDisabled: "#132629e",
+          colorBgContainerDisabled: "white",
         },
         components: {
           Layout: {

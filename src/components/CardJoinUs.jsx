@@ -1,8 +1,9 @@
 import { Button, Col, Form, Grid, Input, Row, message } from "antd";
 import backgroundJoinUs from "../assets/images/background/background-join-us.png";
 import backgroundJoinUsMobile from "../assets/images/background/background-join-us-mobile.png";
+import { useEffect } from "react";
 
-const CardJoinUs = () => {
+const CardJoinUs = (props) => {
   const { xs } = Grid.useBreakpoint();
   const backgroundImage = xs ? backgroundJoinUsMobile : backgroundJoinUs;
 
@@ -19,6 +20,15 @@ const CardJoinUs = () => {
       max: "${label} tidak boleh lebih dari 13 digit",
     },
   };
+
+  const kodeReferral = props;
+  useEffect(() => {
+    if (kodeReferral.kodeReferral !== undefined) {
+      form.setFieldsValue({
+        Kode_Referral: `${kodeReferral.kodeReferral}`,
+      });
+    }
+  }, []);
 
   const onFinish = (val) => {
     const phoneNumber = val.No_Handphone.substring(0, 4) + "-" + val.No_Handphone.substring(4, 8) + "-" + val.No_Handphone.substring(8, val.No_Handphone.length);
@@ -140,7 +150,7 @@ const CardJoinUs = () => {
               }}
               rules={[{ type: "url" }]}
             >
-              <Input placeholder="Masukkan kode referral" />
+              <Input placeholder="Masukkan kode referral" disabled={kodeReferral.kodeReferral && true} />
             </Form.Item>
             <Form.Item className="button-item">
               <Button className="button-submit" htmlType="submit" type="primary">

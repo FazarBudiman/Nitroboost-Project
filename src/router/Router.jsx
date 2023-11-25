@@ -12,7 +12,9 @@ const Router = () => {
         <Route path="/tentang-kami" exact element={<Home />} />
         <Route path="/fasilitas" exact element={<Fasilitas />} />
         <Route path="/galeri" exact element={<Galeri />} />
-        <Route path="/join-us" exact element={<JoinUs />} />
+        <Route path="/join-us" exact element={<JoinUs />}>
+          <Route path="/join-us/:kodeReferral" exact element={<JoinUs />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
