@@ -3,11 +3,10 @@ import ilustrasiWhyUs from "../assets/images/ilustrasi/why-us-ilustrasi.png";
 const { useBreakpoint } = Grid;
 
 const CardWhyUs = () => {
-  const { xs, sm, md, lg } = useBreakpoint();
+  const { xs, sm, md } = useBreakpoint();
 
   return (
     <div className="card-why-us">
-      {console.log(xs, sm, md, lg)}
       {(!xs && !sm && !md) || (xs && !md) || (sm && !md) ? (
         <Row gutter={[0, { sm: 30 }]}>
           <Col sm={{ offset: 1, span: 22 }} xs={22}>

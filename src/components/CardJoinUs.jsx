@@ -14,7 +14,6 @@ const CardJoinUs = (props) => {
     required: "Silahkan masukkan ${label} anda  ",
     types: {
       email: "Format ${label} tidak sesuai",
-      url: "Format ${label} tidak sesuai",
     },
     string: {
       max: "${label} tidak boleh lebih dari 13 digit",
@@ -32,6 +31,7 @@ const CardJoinUs = (props) => {
 
   const onFinish = (val) => {
     const phoneNumber = val.No_Handphone.substring(0, 4) + "-" + val.No_Handphone.substring(4, 8) + "-" + val.No_Handphone.substring(8, val.No_Handphone.length);
+    const tanggalRegistrasi = new Date();
 
     try {
       fetch("https://sheetdb.io/api/v1/b97ftmjkho2ja", {
@@ -47,6 +47,7 @@ const CardJoinUs = (props) => {
               Email: val.email,
               No_Handphone: phoneNumber,
               Kode_Referral: val.Kode_Referral,
+              Tanggal_Registrasi: tanggalRegistrasi.getDate() + "-" + tanggalRegistrasi.getMonth() + "-" + tanggalRegistrasi.getFullYear(),
             },
           ],
         }),
@@ -148,7 +149,6 @@ const CardJoinUs = (props) => {
               tooltip={{
                 icon: <span style={{ fontSize: 12, marginLeft: 10, color: "#e0dede" }}>(Optional)</span>,
               }}
-              rules={[{ type: "url" }]}
             >
               <Input placeholder="Masukkan kode referral" disabled={kodeReferral.kodeReferral && true} />
             </Form.Item>
