@@ -1,0 +1,56 @@
+.footer-menu-item,
+.lokasi-detail,
+.term-condition-content {
+  font-size: 11pt;
+}
+
+.lokasi-title,
+.title-kontak,
+.term-condition-title {
+  font-size: 15pt;
+  letter-spacing: 2pt;
+}
+
+.card-kontak {
+  width: 98%;
+}
+
+.detail-kontak {
+  background-color: #00b451;
+  padding: 10px 0px 10px 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 12pt;
+}
+
+.batas-putih {
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+  .footer-menu-item,
+  .lokasi-detail,
+  .term-condition-content {
+    font-size: 9pt;
+  }
+
+  .lokasi-title,
+  .title-kontak {
+    font-size: 12pt;
+    letter-spacing: 1pt;
+  }
+
+  .term-condition-title {
+    font-size: 11pt;
+    letter-spacing: 0pt;
+  }
+
+  .detail-kontak {
+    font-size: 11pt;
+  }
+}

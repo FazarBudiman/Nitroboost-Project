@@ -1,0 +1,173 @@
+/*  Card-Hero  */
+.card-hero {
+  padding: 120px 0px 0px 50px;
+}
+
+.content-hero > img {
+  width: 100%;
+}
+
+.content-hero > p {
+  width: 125%;
+  margin: 10px 0px 40px;
+}
+
+.content-hero-button {
+  border-radius: 8px;
+  letter-spacing: 1.5pt;
+  padding-top: 7px;
+  font-size: 16pt;
+}
+
+/*  Card-Why-Us  */
+.card-why-us {
+  padding-left: 50px;
+  margin-top: 70px;
+}
+
+.ilustrasi-why-us {
+  width: 100%;
+}
+
+.content-why-us {
+  text-align: center;
+}
+
+/*  Card-Fasilitas  */
+.card-fasilitas {
+  margin-top: 120px;
+}
+
+.content-fasilitas {
+  margin-top: 40px;
+}
+
+.title-content-fasilitas {
+  margin-bottom: 20px;
+}
+
+.ilustrasi-content-fasilitas {
+  height: 200px;
+}
+
+/*  Card-Testimoni  */
+
+.card-testimoni {
+  margin: 130px 0px 120px;
+}
+
+.testimoni-title {
+  text-align: center;
+}
+
+.slick-slide > div {
+  margin: 0px 22.5px;
+  text-align: center;
+  height: 500px;
+}
+
+.slick-next::before,
+.slick-prev::before {
+  display: none !important;
+}
+
+.item-carousel-style-1 {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 30px 15px;
+  min-height: 460px;
+  color: #13629e;
+  background-color: #e0dede;
+}
+
+.item-carousel-style-2 {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 30px 15px;
+  min-height: 460px;
+  color: white;
+  background-color: #13629e;
+}
+
+.item-carousel-style-1 > p,
+.item-carousel-style-2 > p {
+  font-size: 11pt;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Card-Join Us */
+.join-us-title {
+  text-align: center;
+  color: white;
+}
+
+.form-join-us {
+  margin-top: 25px;
+}
+
+.form-item {
+  letter-spacing: 2pt;
+  font-weight: 600;
+}
+
+.button-item {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-submit {
+  letter-spacing: 1pt;
+  background-color: white;
+  color: #13629e;
+  font-weight: 600;
+}
+
+.custom-class {
+  margin-top: 30vh;
+}
+.message-registrasi {
+  padding-top: 100px;
+  position: relative;
+  top: 2px;
+  left: 0px;
+}
+
+/* ===================== Style untuk Mobile ===================== */
+@media only screen and (max-width: 576px) {
+  /* Card-Hero */
+  .card-hero {
+    padding: 70px 0px 0px 30px;
+  }
+
+  /* Card-Why-Us */
+  .card-why-us {
+    padding-left: 30px;
+    margin-top: 40px;
+  }
+
+  .ilustrasi-why-us {
+    margin-top: -10px;
+  }
+
+  /* Card-Fasilitas */
+  .card-fasilitas {
+    margin-top: 50px;
+  }
+  .content-fasilitas {
+    margin-top: 10px;
+  }
+
+  .title-content-fasilitas {
+    margin-bottom: 0px;
+  }
+
+  .ilustrasi-content-fasilitas {
+    height: 120px;
+  }
+
+  /* Card-Testimoni */
+  .card-testimoni {
+    margin: 70px 0px;
+  }
+}

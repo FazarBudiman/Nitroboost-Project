@@ -24,8 +24,8 @@ const itemsMenu = [
   {
     key: "join-us",
     label: (
-      <div className="menu-daftar">
-        <Link style={{ borderBottom: "2.5px solid white" }}>Daftar</Link>
+      <div className="card-menu-item-daftar">
+        <Link className="menu-item-daftar">Daftar</Link>
       </div>
     ),
   },
@@ -52,21 +52,22 @@ const Headers = () => {
   };
 
   return (
-    <Header style={{ borderBottom: "2px solid #13629e" }}>
+    <Header className="headers">
       <Row align={"middle"}>
-        <Col xs={{ offset: 1, span: 16 }} sm={{ offset: 1, span: 10 }} md={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 12 }} xl={{ offset: 2, span: 14 }} style={{ display: "flex", alignItems: "center" }}>
-          <img src={logoNitroboost} width={250} style={{ maxWidth: "70%", height: "auto" }} alt="logo-nitroboost" />
+        <Col className="card-logo" xs={{ offset: 1, span: 16 }} sm={{ offset: 1, span: 10 }} md={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 12 }} xl={{ offset: 2, span: 14 }}>
+          <img src={logoNitroboost} alt="logo-nitroboost" />
         </Col>
         <Col xs={4} sm={12} md={6} lg={6} xl={4}>
           {(xs && !md) || (sm && !md) || (!xs && !sm && !md) ? (
-            <FaBars size={22} style={{ position: "relative", top: 9, left: "90%" }} onClick={showDrawer} />
+            <FaBars className="icon-hamburger-menu" size={22} onClick={showDrawer} />
           ) : (
-            <Menu mode="horizontal" onClick={(e) => onClickMenu(e.key)} style={{ minWidth: 400, height: 98, fontSize: "12pt" }} items={itemsMenu} />
+            <Menu className="list-menu" mode="horizontal" onClick={(e) => onClickMenu(e.key)} items={itemsMenu} />
           )}
         </Col>
       </Row>
 
       <Drawer
+        className="drawer-menu"
         styles={{
           header: {
             border: "0px",
@@ -81,39 +82,33 @@ const Headers = () => {
         open={open}
       >
         <Row gutter={[0, 20]}>
-          <Col offset={1} span={22} style={{ textAlign: "right" }}>
-            <IoClose size={26} onClick={onClose} style={{ color: "#13629e" }} />
+          <Col span={24} className="drawer-menu-close">
+            <IoClose size={26} onClick={onClose} />
           </Col>
-          <Col span={22} style={{ margin: "-10px 0px 0px" }}>
-            <img src={logoNitroboost} width={200} />
+          <Col span={24} className="drawer-menu-logo">
+            <img src={logoNitroboost} />
           </Col>
-          <Col span={22} offset={1} style={{ borderBottom: "1px solid #13629e", padding: "0px 0px 10px 20px" }}>
-            <Link to="/tentang-kami" style={{ color: "#13629e" }}>
-              Tentang Kami
-            </Link>
+          <Col span={24} className="drawer-menu">
+            <Link to="/tentang-kami">Tentang Kami</Link>
           </Col>
-          <Col span={22} offset={1} style={{ borderBottom: "1px solid #13629e", padding: "0px 0px 10px 20px" }}>
-            <Link to="/fasilitas" style={{ color: "#13629e" }}>
-              Fasilitas
-            </Link>
+          <Col span={24} className="drawer-menu">
+            <Link to="/fasilitas">Fasilitas</Link>
           </Col>
-          <Col span={22} offset={1} style={{ borderBottom: "1px solid #13629e", padding: "0px 0px 10px 20px" }}>
-            <Link to="/galeri" style={{ color: "#13629e" }}>
-              Galeri
-            </Link>
+          <Col span={24} className="drawer-menu">
+            <Link to="/galeri">Galeri</Link>
           </Col>
-          <Col span={18} offset={3}>
+          <Col span={20} offset={2}>
             <Link to="/join-us">
-              <Button type="primary" size="middle" style={{ width: "100%", margin: "15px 0px 25px" }}>
+              <Button className="button-menu-item" type="primary" size="middle">
                 Daftar
               </Button>
             </Link>
           </Col>
-          <Col span={24} style={{ border: "1px solid black", padding: "10px", color: "#13629e" }}>
-            <p style={{ textAlign: "center" }}>
+          <Col span={24} className="disclaimer-card">
+            <p>
               <strong>Disclaimer</strong>
               <br />
-              <p style={{ textAlign: "justify", fontSize: "10pt", marginTop: "3px" }}>
+              <p>
                 Seberapapun hasil portofolio orang lain atau sekuat apapun trading seseorang yang diikuti. Trading itu sendiri, kembali kepada pemahaman pemain/user terhadap manajemen resiko dan manajemen keuangan yang baik, serta
                 psikologis trading dalam menentukan rencana trading itu sendiri.
               </p>

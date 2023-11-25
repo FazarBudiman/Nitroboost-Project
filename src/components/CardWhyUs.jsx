@@ -4,30 +4,19 @@ const { useBreakpoint } = Grid;
 
 const CardWhyUs = () => {
   const { xs, sm, md, lg } = useBreakpoint();
-  const cardElement = xs
-    ? {
-        marginTop: "15px",
-      }
-    : {
-        marginTop: "70px",
-      };
 
-  const ilustrasi = xs && {
-    marginTop: "-30px",
-  };
-
-  const paddingTitle = xs ? "30px" : "50px";
   return (
-    <div style={cardElement}>
-      {(xs && !md) || (sm && !md) || (md && !lg) ? (
+    <div className="card-why-us">
+      {console.log(xs, sm, md, lg)}
+      {(!xs && !sm && !md) || (xs && !md) || (sm && !md) ? (
         <Row gutter={[0, { sm: 30 }]}>
-          <Col sm={{ offset: 1, span: 22 }} xs={22} style={{ paddingLeft: paddingTitle }}>
+          <Col sm={{ offset: 1, span: 22 }} xs={22}>
             <h1>WHY US</h1>
           </Col>
-          <Col xs={{ offset: 4, span: 16 }} sm={{ offset: 4, span: 16 }} style={ilustrasi}>
-            <img src={ilustrasiWhyUs} width={"100%"} />
+          <Col xs={{ offset: 2, span: 18 }} sm={{ offset: 2, span: 18 }}>
+            <img src={ilustrasiWhyUs} className="ilustrasi-why-us" />
           </Col>
-          <Col xs={{ offset: 3, span: 18 }} sm={{ offset: 3, span: 18 }} style={{ textAlign: "center" }}>
+          <Col xs={{ offset: 1, span: 20 }} sm={{ offset: 1, span: 20 }} className="content-why-us">
             <Space direction="vertical" size={"middle"}>
               <p>Berdasarkan kegelisahan para pelaku pasar di Indonesia mengenai praktik ilegal dan keresahan yang menimpa industri trading FX serta minimnya pengetahuan dan pemahaman hukum dan manajemen dasar dalam trading.</p>
               <p>
@@ -37,8 +26,8 @@ const CardWhyUs = () => {
           </Col>
         </Row>
       ) : (
-        <Row align={"middle"} style={{ paddingLeft: "50px" }}>
-          <Col offset={2} lg={12} xl={12}>
+        <Row align={"middle"}>
+          <Col md={{ offset: 1, span: 11 }} lg={{ offset: 2, span: 12 }} xl={{ offset: 2, span: 12 }}>
             <Space direction="vertical" size={"middle"}>
               <h1>WHY US</h1>
               <p>Berdasarkan kegelisahan para pelaku pasar di Indonesia mengenai praktik ilegal dan keresahan yang menimpa industri trading FX serta minimnya pengetahuan dan pemahaman hukum dan manajemen dasar dalam trading.</p>
@@ -47,8 +36,8 @@ const CardWhyUs = () => {
               </p>
             </Space>
           </Col>
-          <Col lg={8} xl={8}>
-            <img src={ilustrasiWhyUs} width={"100%"} />
+          <Col md={10} lg={8} xl={8}>
+            <img src={ilustrasiWhyUs} className="ilustrasi-why-us" />
           </Col>
         </Row>
       )}

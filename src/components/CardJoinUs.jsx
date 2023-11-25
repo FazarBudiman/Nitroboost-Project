@@ -47,21 +47,15 @@ const CardJoinUs = () => {
             form.resetFields();
             messageApi.open({
               type: "success",
-              content: <span style={{ paddingTop: 100, position: "relative", top: 2, left: 0 }}>Registrasi Berhasil</span>,
+              content: <span className="message-registrasi">Registrasi Berhasil</span>,
               className: "custom-class",
-              style: {
-                marginTop: "30vh",
-              },
             });
           } else {
             console.log("Registrasi Gagal");
             messageApi.open({
               type: "error",
-              content: <span style={{ paddingTop: 100, position: "relative", top: 2, left: 0 }}>Registrasi Gagal</span>,
+              content: <span className="message-registrasi">Registrasi Gagal</span>,
               className: "custom-class",
-              style: {
-                marginTop: "30vh",
-              },
             });
           }
         });
@@ -82,21 +76,21 @@ const CardJoinUs = () => {
     >
       <Row justify={"center"}>
         <Col xs={22} sm={22} md={18} lg={12} xl={12}>
-          <h2 style={{ textAlign: "center", color: "white" }}>
+          <h2 className="join-us-title">
             Bergabung dengan Kami
             <br /> dan Jadilah Trader Terbaik
           </h2>
         </Col>
       </Row>
-      <Row justify={"center"} style={{ marginTop: 25 }}>
+      <Row className="form-join-us" justify={"center"}>
         <Col xs={20} sm={20} md={16} lg={14} xl={13}>
           {contextHolder}
           <Form form={form} name="join-us" layout="vertical" validateMessages={validateMessages} onFinish={(e) => onFinish(e)}>
             <Form.Item
+              className="form-item"
               name="name"
               required
               label="Nama"
-              style={{ letterSpacing: 2, fontWeight: 600 }}
               rules={[
                 {
                   required: true,
@@ -106,10 +100,10 @@ const CardJoinUs = () => {
               <Input placeholder="Masukkan nama" />
             </Form.Item>
             <Form.Item
+              className="form-item"
               name="email"
               required
               label="Email"
-              style={{ letterSpacing: 2, fontWeight: 600 }}
               rules={[
                 {
                   required: true,
@@ -122,10 +116,10 @@ const CardJoinUs = () => {
               <Input placeholder="Masukkan email" />
             </Form.Item>
             <Form.Item
+              className="form-item"
               name="No_Handphone"
               required
               label="No. Handphone"
-              style={{ letterSpacing: 2, fontWeight: 600 }}
               rules={[
                 {
                   required: true,
@@ -138,9 +132,9 @@ const CardJoinUs = () => {
               <Input type="number" placeholder="Masukkan no. handphone" />
             </Form.Item>
             <Form.Item
+              className="form-item"
               name="Kode_Referral"
               label="Kode Referral"
-              style={{ letterSpacing: 2, fontWeight: 600 }}
               tooltip={{
                 icon: <span style={{ fontSize: 12, marginLeft: 10, color: "#e0dede" }}>(Optional)</span>,
               }}
@@ -148,8 +142,8 @@ const CardJoinUs = () => {
             >
               <Input placeholder="Masukkan kode referral" />
             </Form.Item>
-            <Form.Item style={{ marginTop: 30, textAlign: "center" }}>
-              <Button htmlType="submit" type="primary" style={{ letterSpacing: 2, backgroundColor: "white", color: "#13629e", fontWeight: 600 }}>
+            <Form.Item className="button-item">
+              <Button className="button-submit" htmlType="submit" type="primary">
                 Submit
               </Button>
             </Form.Item>

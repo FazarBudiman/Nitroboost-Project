@@ -1,24 +1,12 @@
 /* eslint-disable react/prop-types */
-import { Avatar, Col, Grid, Row } from "antd";
+import { Avatar, Col, Row } from "antd";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import dataTestimoni from "../assets/data/dataTestimoni";
-import "../assets/styles/testimony.css";
 
 const CardTestimoni = () => {
-  const { xs } = Grid.useBreakpoint();
-  const cardElement = xs
-    ? {
-        marginTop: "70px",
-        marginBottom: "70px",
-      }
-    : {
-        marginTop: "130px",
-        marginBottom: "120px",
-      };
-
   const PrevArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -105,8 +93,8 @@ const CardTestimoni = () => {
   };
 
   return (
-    <Row style={cardElement} justify={"center"} gutter={[0, 40]}>
-      <Col span={22} style={{ textAlign: "center" }}>
+    <Row className="card-testimoni" justify={"center"} gutter={[0, 40]}>
+      <Col className="testimoni-title" span={22}>
         <h1>TESTIMONY</h1>
       </Col>
       <Col xs={18} sm={18} md={20} lg={20} xl={22}>
@@ -117,7 +105,7 @@ const CardTestimoni = () => {
                 <h3>{val.nama}</h3>
                 <div className={parseInt(val.id) % 2 === 0 ? "item-carousel-style-1" : "item-carousel-style-2"}>
                   <Avatar size={130} src={val.image} />
-                  <p style={{ textAlign: "left", marginTop: 20, fontSize: "11pt" }}>{val.testimoni}</p>
+                  <p>{val.testimoni}</p>
                 </div>
               </div>
             );

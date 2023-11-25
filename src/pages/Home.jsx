@@ -7,6 +7,7 @@ import CardWhyUs from "../components/CardWhyUs";
 import CardFasilitas from "../components/CardFasilitas";
 import CardTestimoni from "../components/CardTestimoni";
 import CardJoinUs from "../components/CardJoinUs";
+import "../assets/styles/home.css";
 
 const Home = () => {
   return (

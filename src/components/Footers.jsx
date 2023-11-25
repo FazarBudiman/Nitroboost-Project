@@ -1,32 +1,13 @@
-import { Col, ConfigProvider, Divider, Grid, Row, Space, Typography } from "antd";
+import { Col, ConfigProvider, Divider, Row, Space, Typography } from "antd";
 import { Footer } from "antd/es/layout/layout";
 import Title from "antd/es/typography/Title";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoLogoFacebook, IoLogoTiktok, IoLogoYoutube, IoLogoInstagram } from "react-icons/io5";
 import { Link } from "react-router-dom";
 const { Text } = Typography;
-const { useBreakpoint } = Grid;
+import "../assets/styles/footer.css";
 
 const Footers = () => {
-  const { xs } = useBreakpoint();
-  const fontSizeTitle = xs
-    ? {
-        fontSize: "12pt",
-        letterSpacing: "1pt",
-      }
-    : {
-        fontSize: "15pt",
-        letterSpacing: "2pt",
-      };
-
-  const fontSizeText = xs
-    ? {
-        fontSize: "9pt",
-      }
-    : {
-        fontSize: "11pt",
-      };
-
   return (
     <ConfigProvider
       theme={{
@@ -102,13 +83,13 @@ const Footers = () => {
             }}
           >
             <Space direction="vertical">
-              <Link to="/tentang-kami" style={fontSizeText}>
+              <Link to="/tentang-kami" className="footer-menu-item">
                 Tentang Kami
               </Link>
-              <Link to="/fasilitas" style={fontSizeText}>
+              <Link to="/fasilitas" className="footer-menu-item">
                 Fasilitas
               </Link>
-              <Link to="/galeri" style={fontSizeText}>
+              <Link to="/galeri" className="footer-menu-item">
                 Galeri
               </Link>
             </Space>
@@ -136,10 +117,10 @@ const Footers = () => {
             }}
           >
             <Space direction="vertical">
-              <Title level={5} style={fontSizeTitle}>
-                Jakarta
+              <Title level={5}>
+                <span className="lokasi-title">Jakarta</span>
               </Title>
-              <Text style={fontSizeText}>
+              <Text className="lokasi-detail">
                 Menara Standard Chartered Lt. 18
                 <br />
                 Jl. Prof Dr. Satrio No. 164
@@ -167,18 +148,13 @@ const Footers = () => {
               span: 5,
             }}
           >
-            <Space direction="vertical" style={{ width: "98%" }}>
-              <Title level={5} style={fontSizeTitle}>
-                Chat Support
+            <Space className="card-kontak" direction="vertical">
+              <Title level={5}>
+                <span className="title-kontak">Chat Support</span>
               </Title>
-              <a
-                href="https://wa.me/message/Y2SKK6PXXHDME1"
-                target="_blank"
-                rel="noreferrer"
-                style={{ backgroundColor: "#00b451", padding: "10px 0px 10px 10px", borderRadius: 5, display: "flex", gap: 5, alignItems: "center", fontSize: fontSizeText.fontSize }}
-              >
+              <a className="detail-kontak" href="https://wa.me/message/Y2SKK6PXXHDME1" target="_blank" rel="noreferrer">
                 <FaWhatsapp size={22} />
-                <span style={{ fontSize: "12pt" }}>WA +62 811-145-377</span>
+                <span>WA +62 811-145-377</span>
               </a>
             </Space>
           </Col>
@@ -206,20 +182,20 @@ const Footers = () => {
           >
             <Space direction="vertical" size={"small"}>
               <Space size={"large"}>
-                <Title level={5} style={fontSizeTitle}>
-                  Syarat dan Ketentuan
+                <Title level={5}>
+                  <span className="term-condition-title">Syarat dan Ketentuan</span>
                 </Title>
-                <Divider style={{ width: 2, height: 20, backgroundColor: "white", marginTop: 20 }} />
-                <Title level={5} style={fontSizeTitle}>
-                  Privacy Policy
+                <Divider className="batas-putih" />
+                <Title level={5}>
+                  <span className="term-condition-title">Privacy Policy</span>
                 </Title>
               </Space>
 
-              <Text style={fontSizeText}>
+              <Text className="term-condition-content">
                 <b>Disclaimer : </b>Seluruh konten didalam website ini hanya bersifat informatif. Pihak NitroBoost tidak menjamin kelengkapan dan akurasinya. Pihak NitroBoost tidak bertanggung jawab atas segala bentuk kerugian, baik
                 langsung maupun tidak langsung, akibat penggunaan informasi yang tersedia di website ini.
               </Text>
-              <Text style={fontSizeText}>
+              <Text className="term-condition-content">
                 <b>Kebijakan Privasi : </b>Pihak NitroBoost membutuhkan informasi pribadi bagi pihak yang melakukan pendaftaran untuk kepentingan internal. Pihak NitroBoost dan karyawannya berkewajiban menjaga kerahasiaan informasi tersebut
                 dan tidak akan memberikannya kepada pihak ketiga. Namun jika diwajibkan oleh undang-undang, Pihak NitroBoost dapat memberikan informasi tersebut ke otoritas publik.
               </Text>
