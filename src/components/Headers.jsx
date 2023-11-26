@@ -42,7 +42,7 @@ const Headers = () => {
       } else {
         navigate(`/${e}`);
       }
-    }, 2000);
+    }, 500);
   };
 
   const [open, setOpen] = useState(false);

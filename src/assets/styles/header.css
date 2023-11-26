@@ -91,3 +91,10 @@
   font-size: 10pt;
   margin-top: 3px;
 }
+
+.card-logo > img:hover,
+.drawer-menu-logo > img:hover,
+.drawer-menu-close:hover,
+.icon-hamburger-menu:hover {
+  cursor: pointer;
+}
