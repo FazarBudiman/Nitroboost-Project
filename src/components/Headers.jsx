@@ -55,7 +55,9 @@ const Headers = () => {
     <Header className="headers">
       <Row align={"middle"}>
         <Col className="card-logo" xs={{ offset: 1, span: 16 }} sm={{ offset: 1, span: 10 }} md={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 12 }} xl={{ offset: 2, span: 14 }}>
-          <img src={logoNitroboost} alt="logo-nitroboost" />
+          <a href="/">
+            <img src={logoNitroboost} alt="logo-nitroboost" />
+          </a>
         </Col>
         <Col xs={4} sm={12} md={6} lg={6} xl={4}>
           {(xs && !md) || (sm && !md) || (!xs && !sm && !md) ? (
