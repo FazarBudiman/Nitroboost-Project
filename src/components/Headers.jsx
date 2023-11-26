@@ -37,7 +37,11 @@ const Headers = () => {
 
   const onClickMenu = (e) => {
     setTimeout(() => {
-      navigate(`/${e}`);
+      if (e === null) {
+        navigate(`/`);
+      } else {
+        navigate(`/${e}`);
+      }
     }, 2000);
   };
 
@@ -55,9 +59,7 @@ const Headers = () => {
     <Header className="headers">
       <Row align={"middle"}>
         <Col className="card-logo" xs={{ offset: 1, span: 16 }} sm={{ offset: 1, span: 10 }} md={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 12 }} xl={{ offset: 2, span: 14 }}>
-          <a href="/">
-            <img src={logoNitroboost} alt="logo-nitroboost" />
-          </a>
+          <img src={logoNitroboost} alt="logo-nitroboost" onClick={() => onClickMenu(null)} />
         </Col>
         <Col xs={4} sm={12} md={6} lg={6} xl={4}>
           {(xs && !md) || (sm && !md) || (!xs && !sm && !md) ? (
@@ -88,7 +90,7 @@ const Headers = () => {
               <IoClose size={26} onClick={onClose} />
             </Col>
             <Col xs={{ span: 24 }} sm={{ offset: 1, span: 22 }} className="drawer-menu-logo">
-              <img src={logoNitroboost} />
+              <img src={logoNitroboost} alt="logo-nitroboost" onClick={() => onClickMenu(null)} />
             </Col>
             <Col xs={{ span: 24 }} sm={{ offset: 1, span: 22 }} className="drawer-menu">
               <Link to="/tentang-kami">Tentang Kami</Link>
@@ -111,11 +113,10 @@ const Headers = () => {
             <Col xs={{ span: 24 }} sm={{ offset: 1, span: 22 }} className="disclaimer-card">
               <p>
                 <strong>Disclaimer</strong>
-                <br />
-                <p>
-                  Seberapapun hasil portofolio orang lain atau sekuat apapun trading seseorang yang diikuti. Trading itu sendiri, kembali kepada pemahaman pemain/user terhadap manajemen resiko dan manajemen keuangan yang baik, serta
-                  psikologis trading dalam menentukan rencana trading itu sendiri.
-                </p>
+              </p>
+              <p>
+                Seberapapun hasil portofolio orang lain atau sekuat apapun trading seseorang yang diikuti. Trading itu sendiri, kembali kepada pemahaman pemain/user terhadap manajemen resiko dan manajemen keuangan yang baik, serta
+                psikologis trading dalam menentukan rencana trading itu sendiri.
               </p>
             </Col>
           </Row>
