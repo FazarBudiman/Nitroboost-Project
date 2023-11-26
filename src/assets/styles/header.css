@@ -36,27 +36,33 @@
 
 .icon-hamburger-menu {
   position: relative;
-  top: 8px;
+  top: 6px;
   left: 90%;
 }
 
-.drawer-menu {
-  border-bottom: 1px solid #13629e;
-  padding: 0px 0px 10px 20px;
-  color: #13629e;
+.drawer-content {
+  height: 100%;
+}
+
+.drawer-content-menu {
+  width: 100%;
 }
 
 .drawer-menu-close {
   text-align: right;
-}
-
-.drawer-menu-logo {
-  margin: -10px 0px 0px;
+  color: #13629e;
 }
 
 .drawer-menu-logo > img {
-  width: 200px;
+  margin: -10px 0px 5px 0px;
+  width: 170px;
   max-width: 70%;
+}
+
+.drawer-menu {
+  border-bottom: 1px solid #13629e;
+  color: #13629e;
+  padding: 0px 0px 10px 20px;
 }
 
 .drawer-menu > a {
@@ -69,13 +75,13 @@
 }
 
 .disclaimer-card {
-  border: 1px solid black;
   padding: 10px;
   color: #13629e;
 }
 
 .disclaimer-card > p {
   text-align: center;
+  font-size: 12pt;
 }
 
 .disclaimer-card > p > p {
