@@ -84,7 +84,7 @@ const Headers = () => {
         closable={false}
         open={open}
       >
-        <Flex vertical align="center" justify="space-between" className="drawer-content">
+        <Flex vertical align="center" gap={10} className="drawer-content">
           <Row gutter={[0, 20]} className="drawer-content-menu">
             <Col xs={{ span: 24 }} sm={{ offset: 1, span: 22 }} className="drawer-menu-close">
               <IoClose size={26} onClick={onClose} />
