@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const itemsMenu = [
   {
-    key: "tentang-kami",
+    key: "",
     label: "Tentang Kami",
   },
   {
@@ -93,7 +93,7 @@ const Headers = () => {
               <img src={logoNitroboost} alt="logo-nitroboost" onClick={() => onClickMenu(null)} />
             </Col>
             <Col xs={{ span: 24 }} sm={{ offset: 1, span: 22 }} className="drawer-menu">
-              <Link to="/tentang-kami">Tentang Kami</Link>
+              <Link to="/">Tentang Kami</Link>
             </Col>
             <Col xs={{ span: 24 }} sm={{ offset: 1, span: 22 }} className="drawer-menu">
               <Link to="/fasilitas">Fasilitas</Link>

@@ -55,9 +55,9 @@ const Footers = () => {
               <a href="https://instagram.com/nitro_officialjkt?utm_source=qr" target="_blank" rel="noreferrer">
                 <IoLogoInstagram size={26} />
               </a>
-              <a href="" target="_blank" rel="noreferrer">
+              {/* <a href="" target="_blank" rel="noreferrer">
                 <IoLogoFacebook size={26} />
-              </a>
+              </a> */}
               <a href="https://www.tiktok.com/@nitro_offialjkt?_t=8hSmEgVKUGQ&_r=1" target="_blank" rel="noreferrer">
                 <IoLogoTiktok size={26} />
               </a>
@@ -83,7 +83,7 @@ const Footers = () => {
             }}
           >
             <Space direction="vertical">
-              <Link to="/tentang-kami" className="footer-menu-item">
+              <Link to="/" className="footer-menu-item">
                 Tentang Kami
               </Link>
               <Link to="/fasilitas" className="footer-menu-item">
