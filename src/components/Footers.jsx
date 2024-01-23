@@ -152,7 +152,7 @@ const Footers = () => {
               <Title level={5}>
                 <span className="title-kontak">Chat Support</span>
               </Title>
-              <a className="detail-kontak" href="https://wa.me/qr/AFFN4BRNZHWMA1" target="_blank" rel="noreferrer">
+              <a className="detail-kontak" href="https://api.whatsapp.com/send/?phone=62811145377&text=Halo%20NITRO%2C%20saya%20memerlukan%20bantuan" target="_blank" rel="noreferrer">
                 <FaWhatsapp size={22} />
                 <span>WA +62 811-145-377</span>
               </a>
