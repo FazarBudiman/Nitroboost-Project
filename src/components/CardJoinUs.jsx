@@ -47,7 +47,7 @@ const CardJoinUs = (props) => {
               Email: val.email,
               No_Handphone: phoneNumber,
               Kode_Referral: val.Kode_Referral,
-              Tanggal_Registrasi: tanggalRegistrasi.getDate() + "-" + tanggalRegistrasi.getMonth() + "-" + tanggalRegistrasi.getFullYear(),
+              Tanggal_Registrasi: tanggalRegistrasi.getDate() + "-" + (tanggalRegistrasi.getMonth() + 1) + "-" + tanggalRegistrasi.getFullYear(),
             },
           ],
         }),

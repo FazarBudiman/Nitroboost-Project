@@ -2,7 +2,7 @@ import { Col, ConfigProvider, Divider, Row, Space, Typography } from "antd";
 import { Footer } from "antd/es/layout/layout";
 import Title from "antd/es/typography/Title";
 import { FaWhatsapp } from "react-icons/fa";
-import { IoLogoFacebook, IoLogoTiktok, IoLogoYoutube, IoLogoInstagram } from "react-icons/io5";
+import { IoLogoTiktok, IoLogoYoutube, IoLogoInstagram } from "react-icons/io5";
 import { Link } from "react-router-dom";
 const { Text } = Typography;
 import "../assets/styles/footer.css";
@@ -152,7 +152,7 @@ const Footers = () => {
               <Title level={5}>
                 <span className="title-kontak">Chat Support</span>
               </Title>
-              <a className="detail-kontak" href="https://wa.me/message/Y2SKK6PXXHDME1" target="_blank" rel="noreferrer">
+              <a className="detail-kontak" href="https://wa.me/qr/AFFN4BRNZHWMA1" target="_blank" rel="noreferrer">
                 <FaWhatsapp size={22} />
                 <span>WA +62 811-145-377</span>
               </a>
